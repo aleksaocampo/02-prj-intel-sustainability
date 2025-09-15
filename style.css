@@ -98,13 +98,15 @@ img.sustainability  {
   justify-content: flex-start;
   margin: auto;
   flex-wrap: nowrap;
-  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-x: auto;           /* Enable horizontal scrolling */
   padding-bottom: 1rem;
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
 }
 
-/* Make cards stay in a row and not shrink */
+/* Each card: snap to start of container */
 .timeline .card {
   flex: 0 0 220px;
+  scroll-snap-align: start;      /* Snap each card to the start */
 }
 
 .timeline .card h2 {
