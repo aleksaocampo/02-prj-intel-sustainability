@@ -8,7 +8,7 @@
 body {
   font-family: sans-serif;
   line-height: 1.6;
-  background: #27233A;
+  background: #5175A7;
   color: #ffffff;
   padding: 1rem;
 }
@@ -32,6 +32,7 @@ header p {
 img {
   width: 100px;
   height: 50px;
+  object-position: center;
 }
 .timeline {
   display: flex;
@@ -54,20 +55,37 @@ img {
 
 /* On small/vertical screens, stack cards vertically */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 25px; /* Make the main title smaller on small screens */
+    line-height: 1.05; /* Keep lines close together */
+  }
+
+  /* Center all content and add space on the sides for small screens */
+  body {
+    max-width: 500px;      /* Set a maximum width for the content */
+    margin: 0 auto;        /* Center the body horizontally */
+    padding: 1rem;         /* Add padding for space on the sides */
+  }
+
   .timeline {
     flex-direction: column;
-    align-items: center;
-    overflow-x: visible;
     gap: 1.5rem;
   }
   .timeline .card {
     width: 100%;
-    /* flex: 1 1 100%; */
+  }
+
+  /* Center the header image on small screens */
+  header img {
+    display: block;              /* Make image a block element */
+    margin-left: auto;           /* Auto margin left */
+    margin-right: auto;          /* Auto margin right */
+    margin-bottom: 1rem;         /* Optional: add space below image */
   }
 }
 
 .card {
-  background: #505168;
+  background: #7392BA;
   /* border: 1px solid #ddd; */
   border-radius: 8px;
   width: 220px;
